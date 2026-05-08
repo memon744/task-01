@@ -1,0 +1,197 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+  }
+  
+  .logo {
+    font-weight: 700;
+  }
+  
+  .nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ff4d6d;
+  }
+  
+  /* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  /* Background Container */
+  .bg-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  
+  /* Floating Shapes */
+  .bg-animation span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 77, 109, 0.3);
+    animation: float 10s linear infinite;
+    border-radius: 50%;
+  }
+  
+  /* Different positions */
+  .bg-animation span:nth-child(1) {
+    left: 10%;
+    animation-duration: 8s;
+  }
+  
+  .bg-animation span:nth-child(2) {
+    left: 40%;
+    animation-duration: 12s;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .bg-animation span:nth-child(3) {
+    left: 70%;
+    animation-duration: 10s;
+  }
+  
+  .bg-animation span:nth-child(4) {
+    left: 85%;
+    animation-duration: 14s;
+    width: 25px;
+    height: 25px;
+  }
+  
+  /* Animation */
+  @keyframes float {
+    0% {
+      top: 100%;
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      top: -10%;
+      opacity: 0;
+    }
+  }
+  
+  /* Keep text above animation */
+  .hero h1,
+  .hero p {
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+  /* Glass Effect */
+  .glass {
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  /* About */
+  #about img {
+    width: 120px;
+    border-radius: 50%;
+    margin: 15px 0;
+  }
+  
+  /* Projects */
+  .project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+  }
+  
+  .project-card {
+    transition: 0.4s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+  }
+  
+  /* Buttons */
+  .btn-group {
+    margin-top: 10px;
+  }
+  
+  .btn {
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  
+  .live {
+    background: #ff4d6d;
+    color: white;
+  }
+  
+  .live:hover {
+    background: #ff1e4d;
+  }
+  
+  .code {
+    background: #333;
+    color: white;
+  }
+  
+  .code:hover {
+    background: black;
+  }
+  
+  /* Contact */
+  #contact i {
+    margin-right: 8px;
+  }
+  
+  /* Responsive */
+  @media(max-width:768px){
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links {
+      margin-top: 10px;
+    }
+  }
+  
